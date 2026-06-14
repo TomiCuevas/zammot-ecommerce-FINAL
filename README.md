@@ -1,26 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
-style: |
-  section {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 22px;
-    padding: 40px 60px;
-  }
-  h1 { color: #4f46e5; font-size: 2em; }
-  h2 { color: #4f46e5; border-bottom: 2px solid #4f46e5; padding-bottom: 6px; }
-  h3 { color: #6366f1; }
-  table { font-size: 17px; width: 100%; }
-  th { background: #4f46e5; color: white; }
-  code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-  pre { background: #1e1e2e; color: #cdd6f4; padding: 16px; border-radius: 8px; font-size: 0.8em; }
-  .lead h1 { font-size: 2.4em; text-align: center; }
-  .lead p { text-align: center; color: #6366f1; }
----
-
-<!-- _class: lead -->
-
 # ZAMMOT E-Commerce
 ### Entrega Final — Aplicaciones Web II
 **Tomás Cuevas · 2026**
@@ -29,24 +6,13 @@ style: |
 
 ## Enlaces del Proyecto
 
-### Repositorio de GitHub
-> 🔗 **[https://github.com/TomiCuevas/zammot-ecommerce-FINAL](https://github.com/TomiCuevas/zammot-ecommerce-FINAL)**
-
-### Video Explicativo
-> 🎥 **[PENDIENTE — agregar link del video]**
-
-### Link de Publicación
-> 🌐 No aplica (proyecto local sin deploy)
+- 🔗 **Repositorio:** [https://github.com/TomiCuevas/zammot-ecommerce-FINAL](https://github.com/TomiCuevas/zammot-ecommerce-FINAL)
+- 🎥 **Video explicativo:** [PENDIENTE — agregar link del video]
+- 🌐 **Deploy:** No aplica (proyecto local sin deploy)
 
 ---
 
-## Roadmap del Proyecto
-
-![w:860](roadmap.svg)
-
----
-
-## Descripción General del Sistema
+## Descripción General
 
 **ZAMMOT** es un e-commerce de indumentaria masculina formal construido sobre una arquitectura cliente-servidor desacoplada.
 
@@ -83,9 +49,9 @@ La comunicación sigue el patrón **REST**:
 
 ---
 
-## Modelos de Datos — Mongoose Schemas
+## Modelos de Datos
 
-**Usuario**
+### Usuario
 | Campo | Tipo | Detalle |
 |-------|------|---------|
 | nombre, apellido | String | required |
@@ -94,9 +60,11 @@ La comunicación sigue el patrón **REST**:
 | activo | Boolean | default: true |
 | direccion, fechaNac | String | opcionales |
 
-**Producto** · `id · title · price · category · stock · disponible`
+### Producto
+`id · title · price · category · stock · disponible`
 
-**Venta** · `id_usuario (ref) · productos[] · total · direccion · fecha`
+### Venta
+`id_usuario (ref) · productos[] · total · direccion · fecha`
 
 ---
 
@@ -175,8 +143,9 @@ Al confirmar una compra (`createSaleAction`):
 
 ---
 
-## Tecnologías — Backend
+## Tecnologías
 
+### Backend
 | Paquete | Versión | Función |
 |---------|---------|---------|
 | `express` | ^5.2.1 | Framework web, rutas y middlewares |
@@ -188,20 +157,14 @@ Al confirmar una compra (`createSaleAction`):
 
 **Configuración:** `"type": "module"` → ES Modules (`import`/`export`)
 
-**Scripts:** `npm start` · `npm run seed`
-
----
-
-## Tecnologías — Frontend y Herramientas
-
-**Librerías (CDN)**
+### Frontend (CDN)
 | Librería | Versión | Uso |
 |----------|---------|-----|
 | Bootstrap CSS | 5.3.2 | Grilla, componentes, responsive |
 | Bootstrap JS | 5.3.3 | Menú hamburguesa, interactividad |
 | Bootstrap Icons | 1.13.1 | Iconos en navbar, productos, perfil |
 
-**Herramientas de desarrollo**
+### Herramientas de desarrollo
 - **MongoDB Atlas** — base de datos NoSQL en la nube
 - **VS Code + Live Server** — entorno de desarrollo (puerto 5500)
 - **Postman** — pruebas de API REST
@@ -224,29 +187,37 @@ Al confirmar una compra (`createSaleAction`):
 | 09 | Validación mejorada en contacto | Frontend |
 | 10 | Corrección warnings Mongoose deprecados | Backend |
 
----
+### Detalle de mejoras principales
 
-## Detalle de Mejoras Principales
-
-**JWT + bcrypt** — contraseñas hasheadas, compras protegidas por token de 8h
-
-**Control de stock** — validación en frontend y backend, descuento atómico con `$inc`, marca `disponible: false` al llegar a 0
-
-**Perfil editable** — `PUT /users/update/:id` actualiza MongoDB y `sessionStorage` simultáneamente
-
-**Token expirado** — detección del `401`, limpieza de sesión y redirección al login con mensaje usando `sessionStorage` como mensajería entre páginas
-
-**Toasts** — reemplazo de `alert()` por notificaciones animadas, auto-eliminadas a los 2.2s
+- **JWT + bcrypt** — contraseñas hasheadas, compras protegidas por token de 8h
+- **Control de stock** — validación en frontend y backend, descuento atómico con `$inc`, marca `disponible: false` al llegar a 0
+- **Perfil editable** — `PUT /users/update/:id` actualiza MongoDB y `sessionStorage` simultáneamente
+- **Token expirado** — detección del `401`, limpieza de sesión y redirección al login con mensaje
+- **Toasts** — reemplazo de `alert()` por notificaciones animadas, auto-eliminadas a los 2.2s
 
 ---
 
-<!-- _class: lead -->
+## Cómo ejecutar el proyecto
 
-# ¡Gracias!
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/TomiCuevas/zammot-ecommerce-FINAL.git
 
-**ZAMMOT E-Commerce · Aplicaciones Web II**
+# 2. Instalar dependencias del Backend
+cd Backend
+npm install
 
-Tomás Cuevas · 2026
+# 3. Configurar variables de entorno
+cp .env.example .env
+# Editar .env con tu MONGO_URI y JWT_SECRET
 
-> 🔗 Repositorio: **[https://github.com/TomiCuevas/zammot-ecommerce-FINAL](https://github.com/TomiCuevas/zammot-ecommerce-FINAL)**
-> 🎥 Video: **[PENDIENTE]**
+# 4. (Opcional) Poblar la base de datos
+npm run seed
+
+# 5. Iniciar el servidor
+npm start
+# → Servidor en http://localhost:3001
+
+# 6. Abrir el Frontend
+# Abrir Frontend/index.html con Live Server (puerto 5500)
+```
