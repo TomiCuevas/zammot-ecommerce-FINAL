@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ZAMMOT - Mi perfil</title>
+
+    <link rel="icon" type="image/webp" href="../styles/img/zammot_bowtie.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/css/styless.css">
+</head>
+
+<body data-bs-theme="dark">
+
+    <div id="navbar"></div>
+
+    <section class="container my-5" style="max-width: 560px;">
+
+        <div class="text-center mb-5">
+            <i class="bi bi-person-circle fs-1 d-block mb-3"></i>
+            <h1 class="mb-1">Mi perfil</h1>
+            <p class="text-secondary mb-0">Revisá y actualizá tus datos personales.</p>
+        </div>
+
+        <div class="card bg-dark border-secondary shadow-sm">
+            <div class="card-body p-4">
+
+                <form id="perfil-form">
+
+                    <div class="mb-3">
+                        <label class="form-label text-secondary small">Nombre</label>
+                        <input type="text" id="perfil-nombre" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-secondary small">Apellido</label>
+                        <input type="text" id="perfil-apellido" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-secondary small">Email</label>
+                        <input type="email" id="perfil-email" class="form-control" disabled>
+                        <div class="form-text text-secondary">El email no se puede modificar.</div>
+                    </div>
+
+                    <!-- DOMICILIO -->
+                    <div class="mb-1">
+                        <label class="form-label text-secondary small">Domicilio</label>
+                    </div>
+
+                    <div class="row g-2 mb-2">
+                        <div class="col-8">
+                            <input type="text" id="perfil-calle" class="form-control" placeholder="Calle">
+                        </div>
+                        <div class="col-4">
+                            <input type="text" id="perfil-numero" class="form-control" placeholder="Nro.">
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <input type="text" id="perfil-piso" class="form-control" placeholder="Piso / Depto (opcional)">
+                    </div>
+
+                    <div class="row g-2 mb-2">
+                        <div class="col-8">
+                            <input type="text" id="perfil-localidad" class="form-control" placeholder="Localidad">
+                        </div>
+                        <div class="col-4">
+                            <input type="text" id="perfil-cp" class="form-control" placeholder="C.P.">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <select id="perfil-provincia" class="form-select">
+                            <option value="" disabled selected>Provincia</option>
+                            <option>Buenos Aires</option>
+                            <option>Ciudad Autónoma de Buenos Aires</option>
+                            <option>Catamarca</option>
+                            <option>Chaco</option>
+                            <option>Chubut</option>
+                            <option>Córdoba</option>
+                            <option>Corrientes</option>
+                            <option>Entre Ríos</option>
+                            <option>Formosa</option>
+                            <option>Jujuy</option>
+                            <option>La Pampa</option>
+                            <option>La Rioja</option>
+                            <option>Mendoza</option>
+                            <option>Misiones</option>
+                            <option>Neuquén</option>
+                            <option>Río Negro</option>
+                            <option>Salta</option>
+                            <option>San Juan</option>
+                            <option>San Luis</option>
+                            <option>Santa Cruz</option>
+                            <option>Santa Fe</option>
+                            <option>Santiago del Estero</option>
+                            <option>Tierra del Fuego</option>
+                            <option>Tucumán</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">
+                        <i class="bi bi-check-circle me-2"></i>Guardar cambios
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="./home.html" class="btn btn-outline-light px-4 rounded-pill">
+                Volver al Home
+            </a>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2025 ZAMMOT - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- APIs -->
+    <script type="module" src="../api/app.js"></script>
+    <script type="module" src="../api/auth.api.js"></script>
+
+    <!-- JS -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/dataPages.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/wishlist.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/renderProducts.js"></script>
+
+    <!-- controller -->
+    <script src="../controllers/perfil.controller.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

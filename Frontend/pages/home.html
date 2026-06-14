@@ -1,0 +1,184 @@
+<!DOCTYPE html>  
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ZAMMOT - HOME</title>
+
+    <link rel="icon" type="image/webp" href="../styles/img/zammot_bowtie.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/css/styless.css">
+    <link rel="stylesheet" href="../styles/css/destacados.css">
+</head>
+
+<body data-bs-theme="dark">
+
+    <div id="navbar"></div>
+
+    <section class="promo-section text-center py-2">
+        <h5>2x1 en Trajes</h5>
+        <p class="mb-0">Solo por tiempo limitado</p>
+    </section>
+
+    <div class="banner-container">
+        <img src="../styles/img/banner_zammot.webp"
+             alt="Publicidad ZAMMOT"
+             class="img-fluid rounded shadow">
+    </div>
+
+    <section class="quality-section text-center py-3">
+        <h5>La mejor calidad y elegancia.</h5>
+    </section>
+
+    <!-- RECOMENDADOS -->
+    <div class="container my-5">
+
+        <h2 class="text-center mb-4">
+            Recomendados para ti
+        </h2>
+
+        <div class="horizontal-wrapper position-relative">
+
+            <button class="scroll-btn left-btn">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <div class="horizontal-track"
+                 id="carousel-destacados">
+            </div>
+
+            <button class="scroll-btn right-btn">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- TODOS LOS PRODUCTOS -->
+    <section class="container-fluid my-5">
+
+        <h2 class="text-center mb-4">
+            Todos los productos
+        </h2>
+
+        <!-- BUSCADOR -->
+        <div class="row justify-content-center mb-2 g-2">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-text bg-dark border-secondary">
+                        <i class="bi bi-search text-secondary"></i>
+                    </span>
+                    <input type="text"
+                           id="search-filter"
+                           class="form-control"
+                           placeholder="Buscar producto...">
+                </div>
+            </div>
+        </div>
+
+        <!-- FILTROS -->
+        <div class="row justify-content-center mb-4 g-2 align-items-center">
+
+            <div class="col-md-2">
+                <select id="category-filter" class="form-select">
+                    <option value="all">Todas las categorías</option>
+                    <option value="camisas">Camisas</option>
+                    <option value="trajes">Trajes</option>
+                    <option value="zapatos">Zapatos</option>
+                    <option value="destacados">Destacados</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <input
+                    type="number"
+                    id="min-price-filter"
+                    class="form-control"
+                    placeholder="Precio mínimo">
+            </div>
+
+            <div class="col-md-2">
+                <input
+                    type="number"
+                    id="max-price-filter"
+                    class="form-control"
+                    placeholder="Precio máximo">
+            </div>
+
+            <div class="col-md-2">
+                <select id="sort-filter" class="form-select">
+                    <option value="">Ordenar por...</option>
+                    <option value="price_asc">Precio: menor a mayor</option>
+                    <option value="price_desc">Precio: mayor a menor</option>
+                    <option value="name_asc">Nombre: A - Z</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <button id="clear-filters" class="btn btn-outline-light w-100">
+                    Limpiar filtros
+                </button>
+            </div>
+
+        </div>
+
+       <div id="product-list"
+     class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 my-5 mx-2">
+        </div>
+
+    </section>
+
+    <!-- MIS COMPRAS -->
+    <section class="container my-5">
+
+        <div class="text-center p-4 rounded-4 shadow-sm"
+             style="background: rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">
+
+            <i class="bi bi-bag-check fs-1 mb-3 d-block"></i>
+
+            <h2 class="mb-2">
+                Mis compras
+            </h2>
+
+            <p class="text-secondary mb-4">
+                Consultá tu historial completo de compras y pedidos registrados.
+            </p>
+
+            <a href="./miscompras.html"
+               class="btn btn-outline-light px-4 py-2 rounded-pill">
+                Ver mis compras
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2025 ZAMMOT - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- APIs -->
+    <script type="module" src="../api/app.js"></script>
+    <script type="module" src="../api/product.api.js"></script>
+
+    <!-- JS -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/dataPages.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/wishlist.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/renderProducts.js"></script>
+    <script src="../js/homeCarousel.js"></script>
+
+    <!-- controller -->
+    <script src="../controllers/home.controller.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMMOT - Registro</title>
+    <link rel="icon" type="image/webp" href="../styles/img/zammot_bowtie.webp">
+    <link rel="stylesheet" href="../styles/css/Registro.css">
+</head>
+
+<body>
+
+    <div class="reg-wrapper">
+
+        <!-- Marca -->
+        <div class="brand-card">
+            <img src="../styles/img/zammot_bowtie.webp"
+                 alt="ZAMMOT Logo"
+                 class="brand-logo">
+            <div class="brand-text">
+                <h1 class="brand-name">ZAMMOT</h1>
+                <p class="brand-slogan">Tus productos de confianza</p>
+            </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="reg-card">
+
+            <h2>Crear cuenta</h2>
+
+            <form id="registroForm"
+                  onsubmit="registerUser(event)">
+
+                <div class="input-box">
+                    <input id="reg-nombre"
+                           type="text"
+                           placeholder="Nombre"
+                           required>
+                </div>
+
+                <div class="input-box">
+                    <input id="reg-apellido"
+                           type="text"
+                           placeholder="Apellido"
+                           required>
+                </div>
+
+                <div class="input-box">
+                    <input id="reg-email"
+                           type="email"
+                           placeholder="Email"
+                           required>
+                </div>
+
+                <div class="input-box">
+                    <input id="reg-pass"
+                           type="password"
+                           placeholder="Contraseña"
+                           required>
+                </div>
+
+                <!-- DOMICILIO -->
+                <p class="section-label">Domicilio</p>
+
+                <div class="input-row">
+                    <div class="input-box input-box--grow">
+                        <input id="reg-calle"
+                               type="text"
+                               placeholder="Calle"
+                               required>
+                    </div>
+                    <div class="input-box input-box--nro">
+                        <input id="reg-numero"
+                               type="text"
+                               placeholder="Nro."
+                               required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <input id="reg-piso"
+                           type="text"
+                           placeholder="Piso / Depto (opcional)">
+                </div>
+
+                <div class="input-row">
+                    <div class="input-box input-box--grow">
+                        <input id="reg-localidad"
+                               type="text"
+                               placeholder="Localidad"
+                               required>
+                    </div>
+                    <div class="input-box input-box--cp">
+                        <input id="reg-cp"
+                               type="text"
+                               placeholder="C.P."
+                               required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <select id="reg-provincia" required>
+                        <option value="" disabled selected>Provincia</option>
+                        <option>Buenos Aires</option>
+                        <option>Ciudad Autónoma de Buenos Aires</option>
+                        <option>Catamarca</option>
+                        <option>Chaco</option>
+                        <option>Chubut</option>
+                        <option>Córdoba</option>
+                        <option>Corrientes</option>
+                        <option>Entre Ríos</option>
+                        <option>Formosa</option>
+                        <option>Jujuy</option>
+                        <option>La Pampa</option>
+                        <option>La Rioja</option>
+                        <option>Mendoza</option>
+                        <option>Misiones</option>
+                        <option>Neuquén</option>
+                        <option>Río Negro</option>
+                        <option>Salta</option>
+                        <option>San Juan</option>
+                        <option>San Luis</option>
+                        <option>Santa Cruz</option>
+                        <option>Santa Fe</option>
+                        <option>Santiago del Estero</option>
+                        <option>Tierra del Fuego</option>
+                        <option>Tucumán</option>
+                    </select>
+                </div>
+
+                <!-- FECHA DE NACIMIENTO -->
+                <p class="section-label">Fecha de nacimiento</p>
+
+                <div class="input-box">
+                    <input id="reg-fechaNac"
+                           type="date"
+                           required>
+                </div>
+
+                <button type="submit"
+                        class="btn-registrarse">
+                    Registrarse
+                </button>
+
+                <p class="login-link">
+                    ¿Ya tenés cuenta?
+                    <a href="../index.html">Iniciar sesión</a>
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- APIs -->
+    <script type="module" src="../api/app.js"></script>
+    <script type="module" src="../api/auth.api.js"></script>
+
+    <!-- JS -->
+    <script src="../js/auth.js"></script>
+
+    <!-- controller -->
+    <script src="../controllers/registro.controller.js"></script>
+
+</body>
+</html>

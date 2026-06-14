@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAMMOT - Carrito</title>
+
+    <link rel="icon" type="image/webp" href="../styles/img/zammot_bowtie.webp">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../styles/css/destacados.css">
+    <link rel="stylesheet" href="../styles/css/styless.css">
+</head>
+
+<body class="bg-dark text-light">
+
+    <div id="navbar"></div>
+
+    <div class="container my-5">
+
+        <h2 class="mb-4">🛒 Tu Carrito</h2>
+
+        <div id="cart-items" class="mb-4"></div>
+
+        <h3>
+            Total: $
+            <span id="cart-total">0</span>
+        </h3>
+
+        <div class="text-center mt-4 mb-3">
+
+            <button class="btn btn-success btn-lg d-flex align-items-center justify-content-center gap-2 mx-auto"
+                    onclick="completePurchase()">
+
+                <i class="bi bi-cash-stack"></i>
+
+                Pagar ahora
+
+            </button>
+
+        </div>
+
+        <div class="text-center">
+
+            <button class="btn btn-outline-danger d-flex align-items-center justify-content-center mx-auto gap-2"
+                    onclick="vaciarCarrito()">
+
+                <i class="bi bi-trash"></i>
+
+                Vaciar carrito
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- modal producto -->
+    <div class="modal fade" id="modalProducto" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content text-dark">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title"
+                        id="modalProductoTitulo">
+                    </h5>
+
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body d-flex gap-4">
+
+                    <img id="modalProductoImg"
+                         class="img-fluid rounded shadow"
+                         style="max-width: 320px;">
+
+                    <div>
+
+                        <p id="modalProductoDesc"></p>
+
+                        <p>
+                            <strong>Precio:</strong>
+                            $<span id="modalProductoPrecio"></span>
+                        </p>
+
+                        <p>
+                            <strong>Cantidad:</strong>
+                            <span id="modalProductoQty"></span>
+                        </p>
+
+                        <p>
+                            <strong>Subtotal:</strong>
+                            $<span id="modalProductoSubtotal"></span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- APIs -->
+    <script type="module" src="../api/app.js"></script>
+    <script type="module" src="../api/product.api.js"></script>
+    <script type="module" src="../api/sale.api.js"></script>
+
+    <!-- JS -->
+    <script src="../js/dataPages.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/renderProducts.js"></script>
+
+    <!-- controller -->
+    <script src="../controllers/carrito.controller.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

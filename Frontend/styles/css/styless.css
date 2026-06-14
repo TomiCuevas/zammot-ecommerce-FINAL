@@ -1,0 +1,175 @@
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+.navbar-brand .logo {
+  height: 28px;
+  width: auto;
+  margin-right: .5rem;
+  vertical-align: middle;
+}
+
+
+.banner-container {
+  width: 100%;
+  max-width: 100vw;
+  height: 30vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 45%;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.banner-container:hover img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+  .banner-container { 
+    height: 35vw; 
+  }
+}
+
+
+.promo-section {
+  background-color: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(4px);
+  color: #f8f9fa;
+  font-weight: 500;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.quality-section {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  color: #f8f9fa;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+
+
+.qty-box {
+  margin-bottom: 12px;
+}
+
+
+
+.horizontal-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.horizontal-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 60px 10px;
+}
+
+.horizontal-track::-webkit-scrollbar {
+  display: none !important;
+}
+
+.horizontal-track .card {
+  min-width: 18rem !important;
+  max-width: 18rem !important;
+  flex-shrink: 0;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.horizontal-track .card img {
+  border-radius: 12px;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 0;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  width: 50px;
+  transition: background 0.2s;
+}
+
+.scroll-btn i {
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.left-btn {
+  left: 4px;
+}
+
+.right-btn {
+  right: 4px;
+}
+
+.scroll-btn:hover i {
+  background: rgba(255, 255, 255, 0.85);
+  color: black;
+}
+
+
+/* Navbar active link */
+.navbar .nav-link.nav-active {
+  color: #ffffff !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.55);
+  padding-bottom: 2px;
+}
+
+
+/* Cabecera de páginas de categoría */
+.category-header {
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 0;
+}
+
+.category-header .category-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+
+.category-header .category-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}

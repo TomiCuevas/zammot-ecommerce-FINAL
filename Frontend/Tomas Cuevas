@@ -1,0 +1,23 @@
+# ZAMMOT – E-commerce (TP 1)
+
+**Alumno/a: Cuevas Tomás Gonzalo 
+**Materia/TP: Aplicaciones Web I - E-commerce – TP 1
+
+## Contenido
+- `index.html` (Home)
+- `camisas.html`, `trajes.html`, `zapatos.html` (categorías)
+- `styles.css`
+- Imágenes (`zammot_bowtie.webp`, `zammot_bg.webp`, etc.)
+
+-`Login.html` (Home)
+-`login.css` 
+-`Registro.html` (Home)
+-`Registro.css`
+
+## Cómo abrir
+1. Clonar el repo.
+2. Abrir `index.html` en el navegador.
+
+## Notas
+- Navbar enlazado entre páginas.
+- Formulario de registro y login con inputs correspondientes.
