@@ -337,7 +337,7 @@ npm run seed
 - Importa productos con stock inicial.
 - Importa ventas mapeando los IDs numéricos a los ObjectId de MongoDB.
 
-> Atención: el seed borra todos los datos existentes antes de importar.
+> El seed borra todos los datos existentes antes de importar.
 
 ---
 
