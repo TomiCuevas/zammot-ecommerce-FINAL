@@ -207,12 +207,10 @@ cd Backend
 npm install
 
 # 3. Configurar variables de entorno
-# Opción A: usar las credenciales incluidas (el .env ya está en el repo, no hace falta nada)
-# Opción B: usar tu propia base de datos MongoDB Atlas:
 cp .env.example .env
-# Luego editar .env con tu MONGO_URI, JWT_SECRET y PORT
+# Editar .env con tus propias credenciales de MongoDB Atlas, JWT_SECRET y PORT
 
-# 4. (Solo si usás la Opción B) Poblar la base de datos con datos iniciales
+# 4. Poblar la base de datos con datos iniciales
 npm run seed
 
 # 5. Iniciar el servidor
