@@ -212,7 +212,7 @@ npm install
 cp .env.example .env
 # Luego editar .env con tu MONGO_URI, JWT_SECRET y PORT
 
-# 4. (Opcional) Poblar la base de datos
+# 4. (Solo si usás la Opción B) Poblar la base de datos con datos iniciales
 npm run seed
 
 # 5. Iniciar el servidor
