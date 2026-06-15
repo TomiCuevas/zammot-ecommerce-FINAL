@@ -33,10 +33,8 @@ style: |
 > 🔗 **[https://github.com/TomiCuevas/zammot-ecommerce-FINAL](https://github.com/TomiCuevas/zammot-ecommerce-FINAL)**
 
 ### Video Explicativo
-> 🎥 **[PENDIENTE — agregar link del video]**
+> 🎥 **[https://drive.google.com/file/d/1z0LAoiHLRPzSIe6MtmdqYPfI9zWsldD9/view?usp=sharing](https://drive.google.com/file/d/1z0LAoiHLRPzSIe6MtmdqYPfI9zWsldD9/view?usp=sharing)**
 
-### Link de Publicación
-> 🌐 No aplica (proyecto local sin deploy)
 
 ---
 
@@ -249,4 +247,4 @@ Al confirmar una compra (`createSaleAction`):
 Tomás Cuevas · 2026
 
 > 🔗 Repositorio: **[https://github.com/TomiCuevas/zammot-ecommerce-FINAL](https://github.com/TomiCuevas/zammot-ecommerce-FINAL)**
-> 🎥 Video: **[PENDIENTE]**
+> 🎥 Video: **[https://drive.google.com/file/d/1z0LAoiHLRPzSIe6MtmdqYPfI9zWsldD9/view?usp=sharing](https://drive.google.com/file/d/1z0LAoiHLRPzSIe6MtmdqYPfI9zWsldD9/view?usp=sharing)**

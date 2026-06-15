@@ -7,8 +7,7 @@
 ## Enlaces del Proyecto
 
 - 🔗 **Repositorio:** [https://github.com/TomiCuevas/zammot-ecommerce-FINAL](https://github.com/TomiCuevas/zammot-ecommerce-FINAL)
-- 🎥 **Video explicativo:** [PENDIENTE — agregar link del video]
-- 🌐 **Deploy:** No aplica (proyecto local sin deploy)
+- 🎥 **Video explicativo:** [Ver video en Google Drive](https://drive.google.com/file/d/1z0LAoiHLRPzSIe6MtmdqYPfI9zWsldD9/view?usp=sharing)
 
 ---
 
